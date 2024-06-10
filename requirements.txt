@@ -1,2 +1,4 @@
 black
 flask
+python_dotenv
+openai>1

@@ -1,4 +1,21 @@
 {% extends 'base.html' %}
+
 {% block content %}
-A service
+    <h1>Service: {{ service_name }}</h1>
+
+    <img src="{{ image_url }}" alt="{{ service_name }} image" />
+    Do not include sensitive or personal information!
+    <form method="POST">
+        <div>
+            <label for="title">Prompt:</label>
+            <input type="text" id="title" name="title">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    {% if result %}
+        <div>
+            <h2>Result:</h2>
+            <p>{{ result }}</p>
+        </div>
+    {% endif %}
 {% endblock %}
