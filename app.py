@@ -16,3 +16,12 @@ def about():
 def contact():
     return render_template("contact.html")
 
+
+@app.route("/service_list")
+def service_list():
+    return render_template("service_list.html")
+
+
+@app.route('/service/<name>')
+def service(name):
+    return render_template("service.html", service_name=name)
