@@ -5,14 +5,17 @@ from openai import OpenAI
 from service_config import service_config
 load_dotenv()
 
+# initialise flask
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY")
 
+# create OpenAI client
 OPENAI_KEY = os.environ.get("OPENAI_KEY")
 open_ai_client = OpenAI(
     api_key=OPENAI_KEY
 )
 
+# function to call OpenAI chat
 def query_open_ai(prompt, ai_role, outputs=3): 
     completion = open_ai_client.chat.completions.create(
         messages=[
@@ -21,11 +24,8 @@ def query_open_ai(prompt, ai_role, outputs=3):
         ],
         model="gpt-3.5-turbo",
     ) 
-    print(completion.choices[0].message.content)
-    # output = list() 
-    # for k in response['choices']: 
-    #     output.append(k['text'].strip()) 
     return completion.choices[0].message.content
+
 
 @app.route("/")
 def index():
