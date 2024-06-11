@@ -1,21 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Service: {{ service_name }}</h1>
 
-    <img src="{{ image_url }}" alt="{{ service_name }} image" />
-    Do not include sensitive or personal information!
+<div class="jumbotron p-3 p-md-5 text-white rounded bg-dark" style="background-image: url('{{ url_for('static', filename='images/banner/'~ service_name ~'.jpg') }}'); background-size: cover; background-position: center;">
+    <div class="container">
+        <h1 class="display-4 font-italic">Welcome to {{ display_name }} Service</h1>
+        <p class="lead my-3">Discover a world of expert services tailored to meet your diverse needs. Whether you're seeking professional advice on real estate or looking to enhance your trading strategies, Bedrift.no is your trusted partner in achieving excellence.</p>
+        <p class="lead mb-0"><a href="service_list" class="text-white font-weight-bold">Order Services</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <b>!Do not include sensitive or personal information!</b>
     <form method="POST">
-        <div>
+        <div class="form-group">
             <label for="title">Prompt:</label>
-            <input type="text" id="title" name="title">
+            <textarea id="title" name="title" class="form-control border-secondary" rows="3" placeholder="Ask Me Anything" required></textarea>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     {% if result %}
-        <div>
+        <div class="mt-4">
             <h2>Result:</h2>
             <p>{{ result }}</p>
         </div>
     {% endif %}
+        <p>
+            <br>
+                <h2>Wondering how you can use me to help you?</h2>
+            <br>
+            {{ guide|safe }}
+        </p>
+</div>
+
 {% endblock %}

@@ -54,13 +54,15 @@ def service_list():
 def service(name):
     image_url = url_for('static', filename=f'images/{name}.jpg')
     current_config=service_config[name]
+    guide=current_config["guide"]
+    display_name=current_config["display_name"]
     current_ai_role=current_config["ai_role"]
     result = None
     if request.method == 'POST':
         prompt = request.form['title']
         result = query_open_ai(prompt, current_ai_role)
 
-    return render_template("service.html", service_name=name, image_url=image_url, result=result)
+    return render_template("service.html", service_name=name, image_url=image_url, result=result, guide=guide, display_name=display_name)
 
 if __name__ == "__main__":
     app.run(debug=True)
