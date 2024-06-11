@@ -9,11 +9,12 @@ Dette prosjektet inngår disse kompetansemålene:
 
 ### planlegge, drifte og implementere IT-løsninger som ivaretar informasjonssikkerhet og gjeldende regelverk for personvern
 
-Tar ikke eller lagrer noe personlig informasjon sendt gjennom nettsiden. Bruker open AI tjenester som kan være en risiko, men har satt en varsel melding ved chatboxen om å ikke dele personlig info, i og med at OpenAI lagrer info den tar imot
+Tar ikke eller lagrer noe personlig informasjon sendt gjennom nettsiden. Bruker open AI tjenester som kan være en risiko, men har satt en varsel melding ved chatboxen om å ikke dele personlig info, i og med at OpenAI lagrer info den tar imot.
 
 "We may use content submitted to ChatGPT, DALL·E, and our other services for individuals to improve model performance"
 https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq  
 
+Jeg bruker secrets i prosjektet som OPEN_AI API key for å sette en kobling til Open AI. Disse kan være farlig å publisere for diverse grunner (bruke min AI service, som kan koste penger), og er derfor lagret i en .env som ikke publiserer til Github.
 
 ### reflektere over og beskrive hvordan brudd på personvernet kan påvirke enkeltmennesker, virksomheter og samfunn 
 Ved brudd på personvernet kan andre få tilgang til personlig info, som Navn Adresse og økonomiske opplysninger. Dette kan blandt annet brukes for blackmail, fraud, phishing, identity theft, stealing selskaps hemmeligheter (espionage) 
