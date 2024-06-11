@@ -1,5 +1,41 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Home
+<div class="jumbotron p-3 p-md-5 text-white rounded home_image">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Welcome to Bedrift.no!</h1>
+      <p class="lead my-3">Discover a world of expert services tailored to meet your diverse needs. Whether you're seeking professional advice on real estate or looking to enhance your trading strategies, Bedrift.no is your trusted partner in achieving excellence.</p>
+      <p class="lead mb-0"><a href="service_list" class="text-white font-weight-bold">Order Services</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <!-- <strong class="d-inline-block mb-2 text-primary">World</strong> -->
+          <h3 class="mb-0">
+            <a class="text-dark" href="service_list">Experience the Future with Our AI-Driven Chat System</a>
+          </h3>
+          <div class="mb-1 text-muted">June 12</div>
+          <p class="card-text mb-auto">At Bedrift.no, we're excited to introduce our latest breakthrough in service excellence - the AI-Driven Service Response System. This innovative technology is designed to revolutionize the way you receive and interact with our services.</p>
+          <a href="service_list">Try It Out!</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <!-- <strong class="d-inline-block mb-2 text-success">Design</strong> -->
+          <h3 class="mb-0">
+            <a class="text-dark" href="about">Why Our Team Loves Working at Bedrift.no</a>
+          </h3>
+          <div class="mb-1 text-muted">June 1</div>
+          <p class="card-text mb-auto">Our employees thrive in a dynamic environment that encourages innovative thinking and continuous learning. "Every day at Bedrift.no presents new challenges and opportunities to push the boundaries of what's possible," says one of our team members.</p>
+          <a href="about">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-About
+    <section class="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Bedrift.no</h2>
+                    <p class="section-description">At Bedrift.no, we're on a mission to revolutionize how businesses operate. Our AI-driven service response system is designed to provide cutting-edge solutions tailored to your needs. Whether you're in real estate, trading, or any other industry, we're here to elevate your experience and drive success.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-info">Contact Us</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-image">
+                        <img src="{{ url_for('static', filename='images/about_us.jpg') }}" class="img-fluid" alt="About Us Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

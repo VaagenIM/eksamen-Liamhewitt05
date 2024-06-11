@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, flash
 from dotenv import load_dotenv
 import os
 from openai import OpenAI
@@ -6,6 +6,7 @@ from service_config import service_config
 load_dotenv()
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
 
 OPENAI_KEY = os.environ.get("OPENAI_KEY")
 open_ai_client = OpenAI(
@@ -36,14 +37,17 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=('GET', 'POST'))
 def contact():
+    if request.method=='POST':
+        print("not supported")
+        flash('Thank you for your feedback')
     return render_template("contact.html")
 
 
 @app.route("/service_list")
 def service_list():
-    return render_template("service_list.html")
+    return render_template("service_list.html", service_config=service_config)
 
 
 @app.route('/service/<name>', methods=('GET', 'POST'))
