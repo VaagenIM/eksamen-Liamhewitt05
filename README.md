@@ -1,6 +1,8 @@
 ## Oppgave
 Jeg har tenkt å lage en nettside basert på python og flask. Nettsiden skal gi mulighet til brukere for spør om ulike tjenester (feks. Real estate, trading), med chat lignende grensesnitt. Skal bruke Open AI og GPT modellene for å svare på spørsmålene. Hvis jeg har tid skal jeg ha CI/CD for å “deploye” til en Azure app service. 
 
+
+
 ## Kompetansemålene
 
 Dette prosjektet inngår disse kompetansemålene: 
@@ -17,43 +19,40 @@ https://help.openai.com/en/articles/7039943-data-usage-for-consumer-services-faq
 Jeg bruker secrets i prosjektet som OPEN_AI API key for å sette en kobling til Open AI. Disse kan være farlig å publisere for diverse grunner (bruke min AI service, som kan koste penger), og er derfor lagret i en .env som ikke publiserer til Github.
 
 ### reflektere over og beskrive hvordan brudd på personvernet kan påvirke enkeltmennesker, virksomheter og samfunn 
-Ved brudd på personvernet kan andre få tilgang til personlig info, som Navn Adresse og økonomiske opplysninger. Dette kan blandt annet brukes for blackmail, fraud, phishing, identity theft, stealing selskaps hemmeligheter (espionage) 
+Ved brudd på personvernet kan andre få tilgang til personlig info, som Navn Adresse og økonomiske opplysninger. Dette kan blandt annet brukes for svindel, identitetstyveri, stjele selskaps hemmeligheter, blackmail, phishing, osv. 
 
 
 ## Brukerstøtte 
 
-### gjøre rede for og anvende etiske retningslinjer og relevant lovverk i eget arbeid 
-
-
 
 ### utvikle kursmateriell og gjennomføre kurs i relevante IT-systemer tilpasset en målgruppe 
 
-Har fokusert en del på UI, for at nettsiden skal være enkel å forstå og bruke for de fleste. Også brukt tid på å prøve å lage en forklarende readme fil, som skal hjelpe meg og andre i og sette opp og bruke dette prosjektet, messt rette mot utviklere.
+Har fokusert en del på UI, for at nettsiden skal være enkel å forstå og bruke for de fleste. Også brukt tid på å prøve å lage en forklarende readme fil, som skal hjelpe meg og andre i og sette opp og bruke dette prosjektet (som er er mest rette mot utviklere).
 
 bruker vennlig, veiledning i nettside til sluttbrukere, utfullende readme tilpasset utviklere
 
-### bruke og tilpasse kommunikasjonsform og fagterminologi i møte med brukere, kunder og fagmiljø. 
-
-
-
 ### reflektere over og gjøre rede for hvordan intelligente systemer påvirker bransjen og samfunnet 
 
-Nettsiden jeg har laget er et eksempel på bruk av AI. Noen positive effekter er enklere tilgang til kunsskap, kjappere svar, ny innsikt, nye muligheter, automatisering av diverse program eller tidligere menneske jobber, større kunnskap. Noen negatvie effekter er at den som sagt erstatte jobber, har mulighet for feil svar/misforståelser som mennesker ikke alltid ville hatt ("feks: chat gpt som sa Anders Breivik var en norsk helt https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai) må lære andre måter å hente info fra
+Nettsiden jeg har laget er et eksempel på bruk av AI. Noen positive effekter er enklere tilgang til kunsskap, større kunnskap, kjappere svar, ny innsikt, nye muligheter, automatisering av diverse program eller tidligere menneske jobber. Noen negatvie effekter er at den som sagt erstatte jobber, har mulighet for feil svar/misforståelser som mennesker ikke alltid ville hatt ("feks: chat gpt som sa Anders Breivik var en norsk helt, eller denne historien om Google sin AI. https://www.theverge.com/2018/1/12/16882408/google-racist-gorillas-photo-recognition-algorithm-ai, Man som ble fortalt å henge seg selv for å stoppe klima forandringer https://www.euronews.com/next/2023/03/31/man-ends-his-life-after-an-ai-chatbot-encouraged-him-to-sacrifice-himself-to-stop-climate-) 
 
+Utvikling av AI gjør også at vi må lære nye ferdigheter og andre måter å jobbe på, feks. Prompt engeneering.
 
-noen selskap responsible Ai guidelines
+Noen selskaps responsible Ai guidelines
+
 https://ai.google/responsibility/responsible-ai-practices/
+
 https://learn.microsoft.com/en-us/azure/machine-learning/concept-responsible-ai?view=azureml-api-2
 
+![Responsible AI](https://learn.microsoft.com/en-us/azure/machine-learning/media/concept-responsible-ai/concept-responsible-ml.png?view=azureml-api-2 "Responsible AI")
 
 
 ### bruke og administrere samhandlingsverktøy som effektiviserer samarbeid og deling av informasjon 
 
-Har brukt Github gjennom hele prosjektet, for versjonskontroll(i tilfelle noe gale skulle skjdd me koden), og slik at jeg kan legge det ut på profilen min som en public repository. Github sammen med bra dokumentasjon og forståpelig kode gjør det enkelt for samarbeid via feks branches, og enkelt og dele me andre.
+Har brukt Github gjennom hele prosjektet, for versjonskontroll(i tilfelle noe gale skulle skjedd me koden), og slik at jeg kan legge det ut på profilen min som en public repository. Github sammen med bra dokumentasjon og forståpelig kode gjør det enkelt for samarbeid via feks branches, og enkelt og dele me andre.
 
 ### utøve brukerstøtte og veilede i relevant programvare 
 
-Brukerstøtte ligger i readme filen for de som ønsker å sette opp prosjektet selv, med en step-by-step guide til å sette det opp. Har også veiledning på nettsiden, og kunne hatt mulighet for en AI chat box laget kunn for brukervennlighet og hjelp til å navigere osv.
+Brukerstøtte ligger i readme filen med en step-by-step guide til å sette det opp. Har jobbet mye med UI og prøvd å gjort den så enkel å forstå som mulig, men også veiledning på nettsiden, og kunne hatt mulighet for en AI chat box laget kunn for hjelp til å navigere eller svare på spørsmål ang nettsiden.
 
 ## Utvikling 
 
@@ -61,13 +60,9 @@ Brukerstøtte ligger i readme filen for de som ønsker å sette opp prosjektet s
 
 Flask er enkel å bruke, forstå og lære, i tillegg til at jeg har brukt det før. Det finnes andre "web framework" som f.eks Django, men hadde ikke så mye tid til å lære noe nytt på gitt tid. Brukt en del bootstrap og for å hjelpe med diverse frontend funksjoner. 
 
-### lage og begrunne funksjonelle krav til en IT-løsning basert på behovskartlegging 
-
-
-
 ### vurdere brukergrensesnitt til IT-tjenester og designe tjenester som er tilpasset brukernes behov 
 
-bilde
+Før jeg begynte laget jeg noen tegninger om hvordan nettsiden skal se ut og fungere. 
 
 ### gjøre rede for hensikten med teknisk dokumentasjon og utarbeide teknisk dokumentasjon for IT-løsninger 
 
@@ -75,7 +70,7 @@ Slik at jeg og andre enklere kan huske og forstå prosjektets oppsett og hvordan
 
 ### beskrive og anvende relevante versjonskontrollsystemer i utviklingsprosjekter 
 
-Som nevnt tidligere har jeg brukt Github som versjonskontroll, hvor jeg har prøvd å comitte forandringer ofte, slik at mulige feil er enklere å rette opp i ved å se på tidligere versjoner på prosjektet.
+Som nevnt tidligere har jeg brukt Github som versjonskontroll, hvor jeg har prøvd å comitte forandringer ofte, slik at mulige feil er enklere å rette opp i ved å se på tidligere versjoner av prosjektet.
 
 
 # AI Chat Website 
@@ -115,6 +110,9 @@ Next install any necessary packages.
 ```bash
 pip install -r requirements.txt
 ```
+### Create .env
+
+Copy example.env to new file called .env, and fill out the contents.
 
 ### Running the Flask App Locally
 
